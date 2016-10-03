@@ -14,7 +14,7 @@ class CarouselPlugin(CMSPluginBase):
     model = Carousel
     module = 'Filer'
     name = _("Carousel")
-    render_template = "carousel.html"
+    render_template = "cmsplugin_carousel/carousel.html"
     allow_children = True
     child_classes = ['CarouselImagePlugin']
 
@@ -28,7 +28,7 @@ class CarouselPlugin(CMSPluginBase):
 
 class CarouselImagePlugin(FilerImagePlugin):
     parent_classes = ['CarouselPlugin']
-    render_template = "image.html"
+    render_template = "cmsplugin_carousel/image.html"
 
 
 plugin_pool.register_plugin(CarouselPlugin)
